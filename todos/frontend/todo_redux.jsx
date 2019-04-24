@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Root from './root';
 import configureStore from './store/store';
 import { receiveTodos, receiveTodo } from "./actions/todo_actions";
-
+import { allTodos } from './reducers/selectors'
 
 
 
@@ -11,12 +11,13 @@ import { receiveTodos, receiveTodo } from "./actions/todo_actions";
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
   const store = configureStore();
-  // const todosReducer = todosReducer;
 
+  // const todosReducer = todosReducer;
+  window.allTodos = allTodos;
 
   window.store = store;
   window.receiveTodo = receiveTodo;
   window.receiveTodos = receiveTodos;
   
-  ReactDOM.render(<App />, root);
+  ReactDOM.render(<Root store={store}/>, root);
 })

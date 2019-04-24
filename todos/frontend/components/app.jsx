@@ -1,13 +1,14 @@
 import React from 'react';
-import ReactyDOM from 'react-dom';
+import TodoListContainer from './todos/todo_list_container';
 
-class ToDoList extends React.Component {
- 
-  render(){
-   
-      <h1>Our app is not broken!!!!!1!!!1:D</h1>
-    
-  }
+const App = () => {
+  // debugger
+  return (
+  <div>
+    <h2>This is our Todo App</h2>
+    <TodoListContainer />
+  </div>
+  )
 }
 
-export default ToDoList;
+export default App;

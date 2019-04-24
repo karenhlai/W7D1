@@ -1,12 +1,13 @@
 import React from 'react';
-import ToDoList from './components/app'
+import App from './components/app';
+import { Provider } from 'react-redux';
 
-function Root(){
+const Root = (props) => {
+  // debugger 
   return (
-    <div>
-    <TodoList />
-    </div>
-  )
-};
+  <Provider store={props.store}>
+    <App /> 
+  </Provider>
+)};
 
 export default Root;

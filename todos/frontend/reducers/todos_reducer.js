@@ -16,6 +16,7 @@ const initialState = {
     done: true
   },
 };
+
 //remember to change initialState back to {}
 const todosReducer = (oldState = initialState, action) => {
   Object.freeze(oldState);
